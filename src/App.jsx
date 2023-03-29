@@ -1,10 +1,14 @@
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavBar from './components/NavBar';
 
 function App() {
+    useEffect(
+    () => {
+      alert("hello pokemon trainer :)");
+    }, []);
  
   const pokemonList = [
     {
@@ -33,6 +37,11 @@ function App() {
     ];
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
+
+    useEffect(
+      () => {
+        pokemonIndex === 3 ? alert("pika pikachu !!!") : null;
+      }, [pokemonIndex]);
     
   return (
     <div className="App">

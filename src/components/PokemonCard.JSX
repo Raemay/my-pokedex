@@ -15,7 +15,7 @@ export default function PokemonCard() {
   return (
     <div>
         <figure>
-            <img src={pokemon.imgSrc} alt={pokemon.imgSrc ? pokemon.imgSrc : "???"}/>
+            {pokemonList.imgSrc ? <img src={pokemonList.imgSrc}></img> : <p>???</p>}
             <figcaption>{pokemon.name}</figcaption>
         </figure>
     </div>

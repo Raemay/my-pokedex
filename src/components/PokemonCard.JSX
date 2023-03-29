@@ -13,7 +13,7 @@ export default function PokemonCard({pokemonList}) {
   return (
     <div>
         <figure>
-            <img src={pokemonList.imgSrc} alt={pokemonList.imgSrc ? pokemonList.imgSrc : "???"}/>
+            {pokemonList.imgSrc ? <img src={pokemonList.imgSrc}></img> : "???"}
             <figcaption>{pokemonList.name}</figcaption>
         </figure>
     </div>
